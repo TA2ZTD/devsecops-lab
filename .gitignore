@@ -1,0 +1,12 @@
+# Klasörler
+jenkins_home/
+sonarqube_data/
+zap_out/
+django-DefectDojo/
+
+# Dosyalar ve Raporlar
+*.json
+*.xml
+*.tgz
+*.tar.gz
+*.log
