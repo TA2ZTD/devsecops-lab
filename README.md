@@ -12,27 +12,27 @@ Sistem, bilerek zafiyetli bırakılmış **OWASP Juice Shop** uygulamasını hed
 
 Sistemimiz, siber güvenlik endüstrisinde standart olarak kabul edilen açık kaynaklı araçların birbiriyle entegre edilmesinden oluşur:
 
-* **Orkestrasyon:** Jenkins (Docker-in-Docker mimarisi ile)
+ **Orkestrasyon:** Jenkins (Docker-in-Docker mimarisi ile)
 <img width="1342" height="414" alt="image" src="https://github.com/user-attachments/assets/8f0cf4c2-6c99-4155-81ef-6020743a0c8d" />
 
 
-* **Zafiyet Yönetim Merkezi:** OWASP DefectDojo
+ **Zafiyet Yönetim Merkezi:** OWASP DefectDojo
 <img width="1883" height="834" alt="image" src="https://github.com/user-attachments/assets/7cf82c2b-71c7-4911-8c50-96b7c6cd3516" />
 
 
-* **Secret Scanning:** Gitleaks
+ **Secret Scanning:** Gitleaks
 <img width="668" height="261" alt="1_Ben-0Jp8xsszbJR1JS9q8g" src="https://github.com/user-attachments/assets/2872317d-5e02-444c-b8ee-f7ef4317595c" />
 
 
-* **SAST (Statik Kod Analizi):** SonarQube
+ **SAST (Statik Kod Analizi):** SonarQube
 <img width="1915" height="784" alt="image" src="https://github.com/user-attachments/assets/f1a52b0f-3880-4629-a708-98860592900c" />
 
 
-* **SCA:** Trivy
+ **SCA:** Trivy
 <img width="329" height="153" alt="images" src="https://github.com/user-attachments/assets/1c56b927-1654-4071-8093-191d41bdc235" />
 
   
-* DAST (Dinamik Analiz): [OWASP ZAP](https://www.zaproxy.org/) & [ProjectDiscovery Nuclei](https://github.com/projectdiscovery/nuclei)
+ **DAST (Dinamik Analiz):** [OWASP ZAP](https://www.zaproxy.org/) & [ProjectDiscovery Nuclei](https://github.com/projectdiscovery/nuclei)
 <img width="860" height="277" alt="1586766458581" src="https://github.com/user-attachments/assets/485664f6-1bec-4a76-8786-7ffabd528a84" /> <img width="498" height="178" alt="1_U5MxN6VKGkqL_RbHaUC5tg" src="https://github.com/user-attachments/assets/33b3d108-ebea-4666-949d-2848c00c5550" />
 
 
@@ -47,20 +47,20 @@ Sistemimiz, siber güvenlik endüstrisinde standart olarak kabul edilen açık k
 ### 1. Ana Projeyi Klonlayın
 Öncelikle bu repoyu bilgisayarınıza indirin:
 
-git clone https://github.com/TA2ZTD/devsecops-lab.git
+* git clone https://github.com/TA2ZTD/devsecops-lab.git
 
-cd devsecops-lab
+* cd devsecops-lab
 
 ### 2. DefectDojo Kurulumu ve Başlatılması
 Zafiyetleri görselleştireceğimiz merkezi panomuzu ayağa kaldırıyoruz:
 
-git clone https://github.com/DefectDojo/django-DefectDojo
+* git clone https://github.com/DefectDojo/django-DefectDojo
 
-cd django-DefectDojo
+* cd django-DefectDojo
 
-./dc-build-local-images.sh
+* ./dc-build-local-images.sh
 
-./dc-up-d.sh postgres-redis
+* ./dc-up-d.sh postgres-redis
 
 *Not: Kurulum tamamlandığında docker-compose.yml dosyasından target portu 8081 olarak değiştirin (default port 8080 olarak geliyor ancak o portta jenkins çalışıyor.) ve terminalde beliren `admin` parolasını not alın. `http://localhost:8081` adresinden Dojo'ya giriş yapın. Sağ üstteki profil menüsünden "API v2 Key" sekmesine giderek anahtarınızı kopyalayın.*
 
@@ -114,28 +114,29 @@ The system targets the intentionally vulnerable OWASP Juice Shop application. Fr
 
 Our system consists of industry-standard open-source tools integrated with each other:
 
-* Orchestration: Jenkins (utilizing Docker-in-Docker architecture)
+ **Orchestration:** Jenkins (utilizing Docker-in-Docker architecture)
 <img width="1342" height="414" alt="image" src="https://github.com/user-attachments/assets/297415a4-c1dd-46f6-85a3-5d1492f84081" />
 
 
-* Vulnerability Management Center: OWASP DefectDojo
-<img width="1883" height="834" alt="image" src="https://github.com/user-attachments/assets/776baaae-837e-48d8-9aa8-aa72d417cfda" />
+ **Vulnerability Management Center:** OWASP DefectDojo
+*<img width="1883" height="834" alt="image" src="https://github.com/user-attachments/assets/776baaae-837e-48d8-9aa8-aa72d417cfda" />
 
 
-* Secret Scanning: Gitleaks
-<img width="668" height="261" alt="1_Ben-0Jp8xsszbJR1JS9q8g" src="https://github.com/user-attachments/assets/2872317d-5e02-444c-b8ee-f7ef4317595c" />
+ **Secret Scanning:** Gitleaks
+*<img width="668" height="261" alt="1_Ben-0Jp8xsszbJR1JS9q8g" src="https://github.com/user-attachments/assets/2872317d-5e02-444c-b8ee-f7ef4317595c" />
 
 
-* SAST (Static Application Security Testing): SonarQube,
-<img width="1915" height="784" alt="image" src="https://github.com/user-attachments/assets/4205c0c5-3310-4478-baa6-4b1f2b291036" />
+ **SAST (Static Application Security Testing):** SonarQube,
+*<img width="1915" height="784" alt="image" src="https://github.com/user-attachments/assets/4205c0c5-3310-4478-baa6-4b1f2b291036" />
 
 
-* SCA (Software Composition Analysis): Trivy
-<img width="329" height="153" alt="images" src="https://github.com/user-attachments/assets/1c56b927-1654-4071-8093-191d41bdc235" />
+ **SCA (Software Composition Analysis):** Trivy
+*<img width="329" height="153" alt="images" src="https://github.com/user-attachments/assets/1c56b927-1654-4071-8093-191d41bdc235" />
 
 
-* DAST (Dynamic Application Security Testing): [OWASP ZAP](https://www.zaproxy.org/) & [ProjectDiscovery Nuclei](https://github.com/projectdiscovery/nuclei)
-<img width="860" height="277" alt="1586766458581" src="https://github.com/user-attachments/assets/485664f6-1bec-4a76-8786-7ffabd528a84" /> <img width="498" height="178" alt="1_U5MxN6VKGkqL_RbHaUC5tg" src="https://github.com/user-attachments/assets/33b3d108-ebea-4666-949d-2848c00c5550" />
+ DAST (Dynamic Application Security Testing): [OWASP ZAP](https://www.zaproxy.org/) & [ProjectDiscovery Nuclei](https://github.com/projectdiscovery/nuclei)
+*<img width="860" height="277" alt="1586766458581" src="https://github.com/user-attachments/assets/485664f6-1bec-4a76-8786-7ffabd528a84" />
+*<img width="498" height="178" alt="1_U5MxN6VKGkqL_RbHaUC5tg" src="https://github.com/user-attachments/assets/33b3d108-ebea-4666-949d-2848c00c5550" />
 ---
 
 ## Installation and Usage Guide
@@ -147,31 +148,31 @@ Our system consists of industry-standard open-source tools integrated with each 
 ### 1. Clone the Main Project
 First, download this repository to your computer:
 
-git clone https://github.com/TA2ZTD/devsecops-lab.git
+* git clone https://github.com/TA2ZTD/devsecops-lab.git
 
-cd devsecops-lab
+* cd devsecops-lab
 
 ### 2. DefectDojo Setup and Initialization
 Launch our central dashboard where vulnerabilities will be visualized:
 
-git clone https://github.com/DefectDojo/django-DefectDojo
+* git clone https://github.com/DefectDojo/django-DefectDojo
 
-cd django-DefectDojo
+* cd django-DefectDojo
 
 Note: Before starting, you must change the target port to 8081 in the docker-compose.yml file (it defaults to 8080, which will conflict with Jenkins). 
 
 After that, run the following commands:
 
-./dc-build-local-images.sh
+* ./dc-build-local-images.sh
 
-./dc-up-d.sh postgres-redis
+* ./dc-up-d.sh postgres-redis
 
 *Note: Once the installation is complete, change the target port to 8081 in the docker-compose.yml file (it defaults to 8080, but Jenkins is already running on that port) and make a note of the admin password displayed in the terminal. Log in to Dojo at http://localhost:8081. Go to the "API v2 Key" tab in the profile menu (top right) to copy your key.*
 
 ### 3. Start Jenkins and SonarQube
 Return to the main directory (where the original docker-compose.yml is located) and start the infrastructure:
 
-docker-compose up -d
+* docker-compose up -d
 
 ### 4. Pipeline Configuration
 Open the Jenkinsfile in the cloned directory with a text editor and update the following variables in the environment block:
