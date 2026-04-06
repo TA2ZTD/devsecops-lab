@@ -15,19 +15,26 @@ Sistemimiz, siber güvenlik endüstrisinde standart olarak kabul edilen açık k
 * **Orkestrasyon:** Jenkins (Docker-in-Docker mimarisi ile)
 <img width="1342" height="414" alt="image" src="https://github.com/user-attachments/assets/8f0cf4c2-6c99-4155-81ef-6020743a0c8d" />
 
+
 * **Zafiyet Yönetim Merkezi:** OWASP DefectDojo
 <img width="1883" height="834" alt="image" src="https://github.com/user-attachments/assets/7cf82c2b-71c7-4911-8c50-96b7c6cd3516" />
+
 
 * **Secret Scanning:** Gitleaks
 <img width="668" height="261" alt="1_Ben-0Jp8xsszbJR1JS9q8g" src="https://github.com/user-attachments/assets/2872317d-5e02-444c-b8ee-f7ef4317595c" />
 
+
 * **SAST (Statik Kod Analizi):** SonarQube
 <img width="1915" height="784" alt="image" src="https://github.com/user-attachments/assets/f1a52b0f-3880-4629-a708-98860592900c" />
 
+
 * **SCA:** Trivy
 <img width="329" height="153" alt="images" src="https://github.com/user-attachments/assets/1c56b927-1654-4071-8093-191d41bdc235" />
+
   
 * DAST (Dinamik Analiz): [OWASP ZAP](https://www.zaproxy.org/) & [ProjectDiscovery Nuclei](https://github.com/projectdiscovery/nuclei)
+<img width="860" height="277" alt="1586766458581" src="https://github.com/user-attachments/assets/485664f6-1bec-4a76-8786-7ffabd528a84" /> <img width="498" height="178" alt="1_U5MxN6VKGkqL_RbHaUC5tg" src="https://github.com/user-attachments/assets/33b3d108-ebea-4666-949d-2848c00c5550" />
+
 
 ---
 
@@ -88,7 +95,8 @@ Bu pipeline'ı OWASP Juice Shop üzerinde çalıştırdığınızda DefectDojo p
 * **DAST:** Güvenlik başlığı (CSP) eksiklikleri ve davranışsal zafiyetler.
 <img width="1274" height="866" alt="image" src="https://github.com/user-attachments/assets/3c1b75ce-8796-4519-933b-f2eaabd0cdf2" />
 
-
+---
+---
 
 ENGLISH DESCRIPTION
 
@@ -113,17 +121,21 @@ Our system consists of industry-standard open-source tools integrated with each 
 * Vulnerability Management Center: OWASP DefectDojo
 <img width="1883" height="834" alt="image" src="https://github.com/user-attachments/assets/776baaae-837e-48d8-9aa8-aa72d417cfda" />
 
+
 * Secret Scanning: Gitleaks
 <img width="668" height="261" alt="1_Ben-0Jp8xsszbJR1JS9q8g" src="https://github.com/user-attachments/assets/2872317d-5e02-444c-b8ee-f7ef4317595c" />
+
 
 * SAST (Static Application Security Testing): SonarQube,
 <img width="1915" height="784" alt="image" src="https://github.com/user-attachments/assets/4205c0c5-3310-4478-baa6-4b1f2b291036" />
 
+
 * SCA (Software Composition Analysis): Trivy
 <img width="329" height="153" alt="images" src="https://github.com/user-attachments/assets/1c56b927-1654-4071-8093-191d41bdc235" />
 
-* DAST (Dynamic Application Security Testing): [OWASP ZAP](https://www.zaproxy.org/) & [ProjectDiscovery Nuclei](https://github.com/projectdiscovery/nuclei)
 
+* DAST (Dynamic Application Security Testing): [OWASP ZAP](https://www.zaproxy.org/) & [ProjectDiscovery Nuclei](https://github.com/projectdiscovery/nuclei)
+<img width="860" height="277" alt="1586766458581" src="https://github.com/user-attachments/assets/485664f6-1bec-4a76-8786-7ffabd528a84" /> <img width="498" height="178" alt="1_U5MxN6VKGkqL_RbHaUC5tg" src="https://github.com/user-attachments/assets/33b3d108-ebea-4666-949d-2848c00c5550" />
 ---
 
 ## Installation and Usage Guide
